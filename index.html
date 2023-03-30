@@ -28,16 +28,20 @@
 <body>
 
     <header>
-        <h1>PaliEDispari</h1>
+        <div class="text-center my-5">
+            <h1>PaliEDispari</h1>
+        </div>
+
     </header>
 
     <main>
 
         <section class="container">
-            <div class="questionOne container text-center">
-                <label for="">Insert a word and i will tell you if it's Palindrome</label>
-                <input type="text" placeholder="La parola mettila qui">
-                <button>Invia</button>
+            <div class="questionOne container text-center bg-success rounded-3">
+                <label class="pt-3 mb-3 d-block text-white" for="">Insert a word and i will tell you if it's
+                    Palindrome</label>
+                <input class="mb-3" id="wording" type="text" placeholder="La parola mettila qui">
+                <button id="button">Invia</button>
             </div>
 
             <div class="ansewrOne d-none">
