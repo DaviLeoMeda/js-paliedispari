@@ -37,15 +37,27 @@ function randomNumber(max, min) {
     return Math.floor(Math.random() * max) + min;
 }
 
+function somma(num1, num2) {
+    return num1 + num2;
+}
+
+
 buttonB.addEventListener('click', function () {
 
     let cpu = randomNumber(10, 1)
 
     let humanX = document.getElementById('numbering').value;
 
+    let pairOrDispair = document.getElementById('pairOr').value;
+
     console.log(humanX, cpu);
 
+    somma(cpu, humanX);
+
+    if (somma % 2 == 0 && ) {
+        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è quello`;
 
 
 
-})
+
+    })
