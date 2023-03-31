@@ -57,6 +57,8 @@ buttonB.addEventListener('click', function () {
 
     somma(cpu, humanX);
 
+    console.log(somma);
+
     if (somma % 2 == 0 && pairOrDispair == 'pair') {
         document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
     } else if (somma % 2 != 0 && pairOrDispair == 'dispair') {
