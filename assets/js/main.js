@@ -52,12 +52,24 @@ buttonB.addEventListener('click', function () {
 
     console.log(humanX, cpu);
 
+    document.querySelector('.humanNumber').innerHTML = `${human}`;
+    document.querySelector('.cpuNumber').innerHTML = `${cpu}`;
+
     somma(cpu, humanX);
 
-    if (somma % 2 == 0 && ) {
-        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è quello`;
+    if (somma % 2 == 0 && pairOrDispair == 'pair') {
+        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
+    } else if (somma % 2 != 0 && pairOrDispair == 'dispair') {
+        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
+    } else if (somma % 2 == 0 && pairOrDispair == 'dispair') {
+        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
+    } else if (somma % 2 != 0 && pairOrDispair == 'pair') {
+        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato è  ${pairOrDispair}, buuhh!!!`;
+    } else if (somma % 2 == 0 && pairOrDispair == 'dispair') {
+        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato è  ${pairOrDispair}, buuhh!!!`;
+    }
 
 
 
 
-    })
+})
