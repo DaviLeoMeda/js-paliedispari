@@ -52,7 +52,7 @@ buttonB.addEventListener('click', function () {
 
     console.log(humanX, cpu);
 
-    document.querySelector('.humanNumber').innerHTML = `${human}`;
+    document.querySelector('.humanNumber').innerHTML = `${humanX}`;
     document.querySelector('.cpuNumber').innerHTML = `${cpu}`;
 
     somma(cpu, humanX);
