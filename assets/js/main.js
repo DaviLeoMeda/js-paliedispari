@@ -37,13 +37,15 @@ function randomNumber(max, min) {
     return Math.floor(Math.random() * max) + min;
 }
 
-buttonB.addEventListener('click', function ({
+buttonB.addEventListener('click', function () {
 
-    let numberX = document.getElementById('numbering').value;
+    let cpu = randomNumber(10, 1)
 
-let cpu = randomNumber(10, 1)
+    let humanX = document.getElementById('numbering').value;
 
-console.log(humanFav, cpu);
+    console.log(humanX, cpu);
+
+
 
 
 })
