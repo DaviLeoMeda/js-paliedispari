@@ -9,15 +9,18 @@ button.addEventListener('click', function () {
     // let dividedWord = entireWord.split().reverse().join();
 
     // console.log(dividedWord);
-    let rivoltedWord = ` `
+    let rivoltedWord = ""
 
     for (let i = word.length - 1; i >= 0; i--) {
 
+        console.log(word[i]);
+
         rivoltedWord += word[i];
+
 
     }
 
-    return rivoltedWord;
+    console.log(rivoltedWord);
 
 
     if (word == rivoltedWord) {
@@ -59,17 +62,17 @@ buttonB.addEventListener('click', function () {
     document.querySelector('.humanNumber').innerHTML = `your number is ${humanX}`;
     document.querySelector('.pcNumber').innerHTML = `its number is ${cpu}`;
 
-    somma(cpu, humanX);
 
-    console.log(somma());
+    let sommariamente = somma(cpu, humanX);
 
-    if (somma % 2 == 0 && pairOrDispair == 'pair') {
+
+    if (sommariamente % 2 == 0 && pairOrDispair == 'pair') {
         document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
-    } else if (somma % 2 != 0 && pairOrDispair == 'dispair') {
+    } else if (sommariamente % 2 != 0 && pairOrDispair == 'dispair') {
         document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
-    } else if (somma % 2 != 0 && pairOrDispair == 'pair') {
+    } else if (sommariamente % 2 != 0 && pairOrDispair == 'pair') {
         document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato non è  ${pairOrDispair}, buuhh!!!`;
-    } else if (somma % 2 == 0 && pairOrDispair == 'dispair') {
+    } else if (sommariamente % 2 == 0 && pairOrDispair == 'dispair') {
         document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato non è  ${pairOrDispair}, buuhh!!!`;
     }
 
