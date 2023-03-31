@@ -9,27 +9,32 @@ button.addEventListener('click', function () {
     // let dividedWord = entireWord.split().reverse().join();
 
     // console.log(dividedWord);
+    let rivoltedWord = ` `
 
     for (let i = word.length - 1; i >= 0; i--) {
 
-        console.log(word[i - 1])
+        rivoltedWord += word[i];
 
-        document.querySelector('.InvertedSense').innerHTML = `${word[0]}+${word[1]}+${word[0]}+${word[0]}+${word[0]}`
-
-
-
-
-
-
-        // if (word[i] == entireWord) {
-        //     console.log(`la parola è palindroma`);
-
-        // } else if (word[i] != entireWord) {
-        //     console.log(`la parola non è palindroma`);
-        // }
-
-        // document.querySelector(`.normalSense`).innerHTML += `${entireWord[i]} `;
     }
+
+    return rivoltedWord;
+
+
+    if (word == rivoltedWord) {
+        document.querySelector('.sense').innerHTML = `la parola ${word} è palindroma!`
+    } else {
+        document.querySelector('.sense').innerHTML = `la parola ${word} non è palindroma!`
+    }
+
+    // if (word[i] == entireWord) {
+    //     console.log(`la parola è palindroma`);
+
+    // } else if (word[i] != entireWord) {
+    //     console.log(`la parola non è palindroma`);
+    // }
+
+    // document.querySelector(`.normalSense`).innerHTML += `${entireWord[i]} `;
+
 
 })
 
@@ -46,14 +51,13 @@ buttonB.addEventListener('click', function () {
 
     let cpu = randomNumber(10, 1)
 
-    let humanX = document.getElementById('numbering').value;
+    let humanX = parseInt(document.getElementById('numbering').value);
 
     let pairOrDispair = document.getElementById('pairOr').value;
 
-    console.log(humanX, cpu);
 
     document.querySelector('.humanNumber').innerHTML = `your number is ${humanX}`;
-    document.querySelector('.cpuNumber').innerHTML = `its number is ${cpu}`;
+    document.querySelector('.pcNumber').innerHTML = `its number is ${cpu}`;
 
     somma(cpu, humanX);
 
@@ -63,12 +67,10 @@ buttonB.addEventListener('click', function () {
         document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
     } else if (somma % 2 != 0 && pairOrDispair == 'dispair') {
         document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
-    } else if (somma % 2 == 0 && pairOrDispair == 'dispair') {
-        document.querySelector('.results').innerHTML = `ci hai azzeccato, il risultato è  ${pairOrDispair}, ottimo`;
     } else if (somma % 2 != 0 && pairOrDispair == 'pair') {
-        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato è  ${pairOrDispair}, buuhh!!!`;
+        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato non è  ${pairOrDispair}, buuhh!!!`;
     } else if (somma % 2 == 0 && pairOrDispair == 'dispair') {
-        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato è  ${pairOrDispair}, buuhh!!!`;
+        document.querySelector('.results').innerHTML = `non ci hai azzeccato, il risultato non è  ${pairOrDispair}, buuhh!!!`;
     }
 
 
